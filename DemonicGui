@@ -1,0 +1,122 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local EatingSimulatorGUI = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local GrowFatness = Instance.new("TextButton")
+local AutoRebirth = Instance.new("TextButton")
+local SafePlace = Instance.new("TextButton")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.new(0.164706, 0.164706, 0.164706)
+Frame.BorderColor3 = Color3.new(1, 0, 0.0156863)
+Frame.Position = UDim2.new(0.413562536, 0, 0.356466889, 0)
+Frame.Selectable = true
+Frame.Size = UDim2.new(0, 165, 0, 227)
+
+EatingSimulatorGUI.Name = "Demonic Destroyer"
+EatingSimulatorGUI.Parent = Frame
+EatingSimulatorGUI.BackgroundColor3 = Color3.new(1, 1, 1)
+EatingSimulatorGUI.BackgroundTransparency = 1
+EatingSimulatorGUI.Position = UDim2.new(-0.00461924076, 0, -0.000361293554, 0)
+EatingSimulatorGUI.Size = UDim2.new(0, 165, 0, 26)
+EatingSimulatorGUI.Font = Enum.Font.Cartoon
+EatingSimulatorGUI.Text = "Demonic Destroyer"
+EatingSimulatorGUI.TextColor3 = Color3.new(0, 0, 0)
+EatingSimulatorGUI.TextSize = 16
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(-0.00200000009, 0, 0.114176072, 0)
+Frame_2.Size = UDim2.new(0, 165, 0, 2)
+
+GrowFatness.Name = "God Mode"
+GrowFatness.Parent = Frame
+GrowFatness.BackgroundColor3 = Color3.new(1, 1, 1)
+GrowFatness.Position = UDim2.new(0.121212125, 0, 0.224669605, 0)
+GrowFatness.Size = UDim2.new(0, 124, 0, 31)
+GrowFatness.Style = Enum.ButtonStyle.RobloxButtonDefault
+GrowFatness.Font = Enum.Font.Fantasy
+GrowFatness.Text = "God Mode"
+GrowFatness.TextColor3 = Color3.new(1, 1, 1)
+GrowFatness.TextSize = 17
+
+AutoRebirth.Name = "Farm"
+AutoRebirth.Parent = Frame
+AutoRebirth.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoRebirth.Position = UDim2.new(0.115151517, 0, 0.462555051, 0)
+AutoRebirth.Size = UDim2.new(0, 124, 0, 31)
+AutoRebirth.Style = Enum.ButtonStyle.RobloxButtonDefault
+AutoRebirth.Font = Enum.Font.Fantasy
+AutoRebirth.Text = "Farm"
+AutoRebirth.TextColor3 = Color3.new(1, 1, 1)
+AutoRebirth.TextSize = 17
+
+SafePlace.Name = "Infinite Yield"
+SafePlace.Parent = Frame
+SafePlace.BackgroundColor3 = Color3.new(1, 1, 1)
+SafePlace.Position = UDim2.new(0.115151517, 0, 0.713656366, 0)
+SafePlace.Size = UDim2.new(0, 124, 0, 31)
+SafePlace.Style = Enum.ButtonStyle.RobloxButtonDefault
+SafePlace.Font = Enum.Font.Fantasy
+SafePlace.Text = "Infinite Yield"
+SafePlace.TextColor3 = Color3.new(1, 1, 1)
+SafePlace.TextSize = 17
+
+function SCRIPT_OWIF78_FAKESCRIPT()
+	local script = Instance.new('Script')
+	script.Parent = EatingSimulatorGUI
+	script.Parent.Parent.Draggable = true
+	
+	repeat
+	    for hue = 0, 1, .01 do
+	        script.Parent.TextColor3 = Color3.fromHSV(hue, 1, 1)
+	        wait(.1)
+	    end
+	    for hue = 1, 0 -.01 do
+	        script.Parent.TextColor3 = Color3.fromHSV(hue, 1, 1)
+	        wait(.1)
+	    end
+	until nil
+
+end
+coroutine.resume(coroutine.create(SCRIPT_OWIF78_FAKESCRIPT))
+function SCRIPT_RNYP78_FAKESCRIPT()
+	local script = Instance.new('Script')
+	script.Parent = GrowFatness
+	script.Parent.MouseButton1Down:Connect(function()
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+if string.lower(msg):sub(1) ==";god" then
+	game.Players.LocalPlayer.Character.pvp:Destroy()
+	end
+end)
+	end
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_RNYP78_FAKESCRIPT))
+function SCRIPT_RYIX65_FAKESCRIPT() 
+	local script = Instance.new('Script')
+	script.Parent = AutoRebirth
+	script.Parent.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/SukiScripts/DarkDestroyer/main/DarkGui"), true))()
+--creator: Suki And Wolve
+--Btw This is V2 Join Our DIscord Server! https://discord.gg/w3mYRWuWRq
+	end
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_RYIX65_FAKESCRIPT))
+function SCRIPT_XQJX67_FAKESCRIPT()  
+	local script = Instance.new('Script')
+	script.Parent = SafePlace
+	script.Parent.MouseButton1Down:Connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		end)
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_XQJX67_FAKESCRIPT))
